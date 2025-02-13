@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
-  margin: 0px;
-  padding: 0px;
-}
+*{ margin: 0px; padding: 0px; text-decoration: none; list-style: none; }
 
 ::-webkit-scrollbar{ width: 5px !important; height: 5px !important; }
-::-webkit-scrollbar-thumb{ background: #0858f7 !important; }
+::-webkit-scrollbar-thumb{ background: #0858f7 !important; border-radius: 10px; }
 ::-webkit-scrollbar-track{ background: transparent !important; }
 
-body{
-  font-family: "Open Sans", serif;
-  background: #ebe9e9;
-}
+body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important; }
 
 
 /* Logo NavBar */
-header{ width: 100%; height: 70px; background: #c5c3c3; }
+header{ width: 100%; height: 70px; background: #fff; position: fixed; top: 0; left: 0; z-index: 1000; }
 header .logo{ text-decoration: none; }
 header .logo img{ width: 85px; }
 header .logo span{ color: #222222; font-weight: 800; font-size: 25px; }
@@ -71,5 +65,60 @@ margin-bottom: 0; }
 .dropdownInfo h4 b{ font-weight: 600; margin-right: 5px; } 
 .dropdownInfo p{ font-size: 12px; font-weight: 500; margin-top: 0; }
 .text-sky{ color: #0858f7; }
-.btn-primary{ background: #0858f7 !important; font-weight: 500 !important; font-size: 14px !important; color: #fff !important; 
-text-transform: capitalize !important; border-radius: 5px !important; }
+.btn-primary{ background: #0858f7 !important; font-weight: 500 !important; font-size: 14px !important; 
+color: #fff !important; text-transform: capitalize !important; border-radius: 5px !important; }
+
+
+/* SideBar */
+.main .sidebarWrapper{ width: 20%; flex: 0 0 20%; transition: all 0.3s ease-in-out; }
+.main .sidebarWrapper .sidebar{ width: 20%; height: 100vh; max-height: calc(100% - 70px) !important; 
+position: fixed; top: 70px; left: 0; background: #fff !important; overflow-y: scroll; overflow-x: hidden; 
+padding-bottom: 40px; }
+.main .sidebarWrapper .sidebar::-webkit-scrollbar{ width: 3px !important; }
+.main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{ background: transparent !important; }
+.main .sidebarWrapper:hover .sidebar::-webkit-scrollbar{ background: #0858f7 !important; }
+
+
+/* SideBar button */
+.main .sidebarWrapper .sidebar ul{ margin-bottom: 0; padding: 10px 15px; }
+.main .sidebarWrapper .sidebar ul li{ list-style: none; }
+.main .sidebarWrapper .sidebar ul li button{ color: #5e5d72 !important; text-align: left; justify-content: left; 
+border-radius: 10px !important; padding: 12px 15px !important; align-items: center; font-size: 15px !important; 
+text-transform: capitalize !important; font-weight: 600 !important; font-family: "Open Sans", serif !important; }
+.main .sidebarWrapper .sidebar ul li button .icon{ display: flex; align-items: center; justify-content: center; 
+width: 25px; height: 25px; margin-right: 10px; }
+.main .sidebarWrapper .sidebar ul li button .icon svg{ color: #000; opacity: 0.9; font-size: 22px; }
+.main .sidebarWrapper .sidebar ul li button *{color: #5e5d72 !important;}
+.main .sidebarWrapper .sidebar ul li button .arrow{ margin-left: auto; display: flex; align-items: center; 
+justify-content: center; width: 25px; height: 25px; transition: all 0.3s ease-in-out; }
+.main .sidebarWrapper .sidebar ul li button:hover{ background: #f1f1f1 !important; }  
+.main .sidebarWrapper .sidebar ul li button.active{ background: #f1f1f1 !important; }
+.main .sidebarWrapper .sidebar ul li button.active .arrow{ transform: rotate(90deg); color: #0858f7; }
+
+
+/* Sous Menu Btn SideBar */
+.main .sidebarWrapper .sidebar ul .submenu{ padding: 0 49px; position: relative; transition: all 0.3s; height: 0; }
+.main .sidebarWrapper .sidebar ul .submenu::before{ content: ''; width: 1px; height: 95%; position: absolute; 
+top: 0; left: 25px; background: rgba(0, 0, 0, 0.2);}
+.main .sidebarWrapper .sidebar ul .submenu li{ width: 100% !important; list-style: none !important; }
+.main .sidebarWrapper .sidebar ul .submenu li a{ color: #5e5d72 !important; text-decoration: none !important; 
+display: block; padding: 6px 0; font-size: 14px; font-weight: 500; transition: all 0.3s ease-in-out; }
+.main .sidebarWrapper .sidebar ul .submenu li a:hover{ color: #0858f7 !important; }
+/* Sous Menu Btn SideBar Non Affiché */
+.main .sidebarWrapper .sidebar ul .submenuWrapper{ transition: all 0.3s; height: 0; overflow: hidden; }
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed .submenu{ opacity: 0; }
+/* Sous Menu Btn SideBar Affiché */
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse{ height: auto; overflow: inherit; }
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu{ opacity: 1; height: auto; }
+
+
+/* Logout NavBar */
+.logoutWrapper{ padding: 0 25px; }
+.logoutWrapper .logoutBox{ width: 100%; height: 130px; padding: 25px; background: #bcd2fb; border-radius: 10px;
+display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.logoutWrapper .logoutBox::before{ content: ''; width: 70px; height: 70px; background: #0858f7; border-radius: 100%; 
+position: absolute; top: -20px; right: -20px; opacity: 0.5; }
+.logoutWrapper .logoutBox::after{ content: ''; width: 30px; height: 30px; background: #0858f7; border-radius: 100%; 
+position: absolute; top: 20px; left: 10px; opacity: 0.5; }
+.logoutWrapper .logoutBox button{ font-size: 14px !important; font-weight: 600; }
+.logoutWrapper .logoutBox button svg{ margin-right: 6px; font-size: 18px !important; }
