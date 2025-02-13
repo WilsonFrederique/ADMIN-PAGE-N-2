@@ -206,7 +206,7 @@ const Header = () => {
                                         </MenuItem>
                                     </div>
 
-                                    <div className="ps-2 py-2 p-2 pt-3 mb-0 w-100">
+                                    <div className="ps-2 py-2 p-2 pt-2 mb-0 w-100">
                                         <Button className='btn btn-primary w-100'>View all notifications</Button>
                                     </div>
                                 </Menu>
