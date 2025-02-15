@@ -613,6 +613,7 @@ const Dashboard = () => {
               </table>
 
               <div className="d-flex tableFooter">
+                <p>Affichage de <b>1</b> sur <b>100</b> résultats</p>
                 <Pagination count={100} color="primary" className='pagination' showFirstButton showLastButton /> 
               </div>
 

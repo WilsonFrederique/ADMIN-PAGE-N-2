@@ -6,7 +6,7 @@
 ::-webkit-scrollbar-thumb{ background: #0858f7 !important; border-radius: 10px; }
 ::-webkit-scrollbar-track{ background: transparent !important; }
 
-body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important; }
+body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important; overflow-x: hidden; }
 
 
 
@@ -80,10 +80,13 @@ color: #fff !important; text-transform: capitalize !important; border-radius: 5p
 
 
 /* SideBar */
-.main .sidebarWrapper{ width: 20%; flex: 0 0 20%; transition: all 0.3s ease-in-out; }
+.main .sidebarWrapper{ width: 20%; flex: 0 0 20%; transition: all 0.3s; }
+.main .sidebarWrapper.toggle{ width: 0%; flex: 0 0 0%; }
 .main .sidebarWrapper .sidebar{ width: 20%; height: 100vh; max-height: calc(100% - 70px) !important; 
 position: fixed; top: 70px; left: 0; background: rgba(255, 255, 255, 0.9) !important; overflow-y: scroll; 
-overflow-x: hidden; padding-bottom: 40px; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+overflow-x: hidden; padding-bottom: 40px; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); 
+transition: all 0.3s; }
+.main .sidebarWrapper.toggle .sidebar{ left: -100%; }
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{ width: 3px !important; }
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{ background: transparent !important; }
 .main .sidebarWrapper:hover .sidebar::-webkit-scrollbar{ background: #0858f7 !important; }
@@ -104,6 +107,7 @@ width: 25px; height: 25px; margin-right: 10px; }
 justify-content: center; width: 25px; height: 25px; transition: all 0.3s ease-in-out; }
 .main .sidebarWrapper .sidebar ul li button:hover{ background: #f1f1f1 !important; }  
 .main .sidebarWrapper .sidebar ul li button.active{ background: #f1f1f1 !important; }
+.main .sidebarWrapper .sidebar ul li button.active .icon svg{ fill: #0858f7 !important; }
 .main .sidebarWrapper .sidebar ul li button.active .arrow{ transform: rotate(90deg); color: #0858f7; }
 
 
@@ -139,8 +143,9 @@ position: absolute; top: 20px; left: 10px; opacity: 0.5; }
 
 
 /* Dashboard Right Content */
-.main .content{ width: 80%; flex: 0 0 80%; }
-.right-content{ padding: 84px 20px; }
+.main .content{ width: 80%; flex: 0 0 80%; transition: all 0.3; }
+.main .content.toggle{ width: 100%; flex: 0 0 100%; }
+.right-content{ padding: 84px 20px; padding-bottom: 10px; }
 .dashboardBoxWrapper{ gap: 20px; width: 100%; flex-wrap: wrap; }
 .dashboardBoxWrapper .dashboardBox{ width: 48%; height: 170px; border-radius: 10px; overflow: hidden; padding: 20px; 
 display: flex; flex-direction: column; justify-content: space-around; text-align: left !important; position: relative; 
@@ -172,11 +177,13 @@ width: 40px !important; height: 40px !important; border-radius: 50% !important; 
 
 
 /* Card */
-.card{ margin: 20px 0; border-radius: 10px; overflow: auto; }
+.card{ margin: 20px 0; border-radius: 10px; }
 .card .hd{ font-size: 18px; font-weight: bold; color: #403e57; }
 .CardFilters .col-md-3 h4{ font-size: 14px; font-weight: 800; text-transform: capitalize; color: #403e57; }
 /* table */
 h1, h2, h3, h4, h5, h6, p{ color: #403e57; }
+.teble-responsive{ overflow: auto; }
+.teble-responsive::-webkit-scrollbar-thumb{ background: #8b8b8b !important; }
 .table .thead-dark th{ background-color: #1866ee !important; border-color: rgba(255, 255, 255, 0.1) !important; 
 font-size: 13px !important; }
 .table tbody td{ font-size: 14px !important; color: #2f2d3e; font-weight: 500; }
@@ -197,3 +204,4 @@ table td .imgWrapper{ width: 20%; flex: 0 0 20%; margin-right: 0.5rem; }
 table td .info{ width: 65%; flex: 0 0 65%; }
 .tableFooter{ padding-bottom: 20px; padding-top: 5px; }
 .tableFooter .pagination{ margin-left: auto; }
+.tableFooter p{ font-size: 14px; font-weight: 500; margin-bottom: 0;  }

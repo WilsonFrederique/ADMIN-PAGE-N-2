@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Logo from '../../assets/images/Logo2.png'
 import Profil from '../../assets/images/Profil.jpg'
 import Profil2 from '../../assets/images/Profil2.png'
@@ -23,12 +23,15 @@ import { FaUser } from "react-icons/fa6";
 import { IoShieldHalfSharp } from "react-icons/io5";
 import Logout from '@mui/icons-material/Logout';
 import Divider from '@mui/material/Divider';
+import { MyContext } from '../../App'
 
 const Header = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [isOpenNotificationDrop, setisOpenNotificationDrop] = useState(false);
     const openMyAcc = Boolean(anchorEl);
     const openNotifications = Boolean(isOpenNotificationDrop);
+
+    const context = useContext(MyContext)
 
     const handleOpenMyAccDrop = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -57,7 +60,9 @@ const Header = () => {
                         </div>
 
                         <div className="col-sm-3 d-flex align-items-center part2 padding ps-1">
-                            <Button className='rounded-circle me-3'> <MdMenuOpen /> </Button>
+                            <Button className='rounded-circle me-3' onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                                {context.isToggleSidebar ? <MdMenuOpen /> : <MdOutlineMenu />}
+                            </Button>
                             <SearachBox />
                         </div>
 
