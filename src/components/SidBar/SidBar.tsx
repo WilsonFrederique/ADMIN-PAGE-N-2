@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
@@ -11,12 +11,15 @@ import { MdMessage } from "react-icons/md";
 import { FaBell } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
 import { IoMdLogOut } from "react-icons/io";
+import { MyContext } from '../../App';
 
 
 
 const SidBar = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
+
+    const context = useContext(MyContext);
 
     const isOpenSubmenu = (index: number) =>{
         setActiveTab(index);
