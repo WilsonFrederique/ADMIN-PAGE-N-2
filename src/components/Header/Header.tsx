@@ -1,4 +1,5 @@
 import React, {useContext, useState} from 'react'
+
 import Logo from '../../assets/images/Logo2.png'
 import Profil from '../../assets/images/Profil.jpg'
 import Profil2 from '../../assets/images/Profil2.png'
@@ -31,6 +32,7 @@ const Header = () => {
     const openMyAcc = Boolean(anchorEl);
     const openNotifications = Boolean(isOpenNotificationDrop);
 
+
     const context = useContext(MyContext)
 
     const handleOpenMyAccDrop = (event: React.MouseEvent<HTMLElement>) => {
@@ -59,7 +61,7 @@ const Header = () => {
                             </Link>
                         </div>
 
-                        <div className="col-sm-3 d-flex align-items-center part2 padding ps-1">
+                        <div className="col-sm-3 d-flex align-items-center part2 padding">
                             <Button className='rounded-circle me-3' onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}>
                                 {context.isToggleSidebar ? <MdMenuOpen /> : <MdOutlineMenu />}
                             </Button>
@@ -217,76 +219,83 @@ const Header = () => {
 
                             </div>
 
-                            <div className="myAccWrapper">
-                                <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop} >
-                                    <div className="userImg">
-                                        <span className="rounded-circle">
-                                            <img src={Profil} alt="Profil" />
-                                        </span>
-                                    </div>
 
-                                    <div className="userInfo">
-                                        <h4>Walle Fred</h4>
-                                        <p className='mb-0'>Admin</p>
-                                    </div>
-                                </Button>
-                                <Menu
-                                    anchorEl={anchorEl}
-                                    id="account-menu"
-                                    open={openMyAcc}
-                                    onClose={handleCloseMyAccDrop}
-                                    onClick={handleCloseMyAccDrop}
-                                    slotProps={{
-                                    paper: {
-                                        elevation: 0,
-                                        sx: {
-                                        overflow: 'visible',
-                                        filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                                        mt: 1.5,
-                                        '& .MuiAvatar-root': {
-                                            width: 32,
-                                            height: 32,
-                                            ml: -0.5,
-                                            mr: 1,
+                            {
+                                context.isLogin !== true ? <Link to={'/login'}><Button className="btn-blue btn-lg btn-round">Sign In</Button></Link> 
+                                : 
+                                <div className="myAccWrapper">
+                                    <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop} >
+                                        <div className="userImg">
+                                            <span className="rounded-circle">
+                                                <img src={Profil} alt="Profil" />
+                                            </span>
+                                        </div>
+
+                                        <div className="userInfo">
+                                            <h4>Walle Fred</h4>
+                                            <p className='mb-0'>Admin</p>
+                                        </div>
+                                    </Button>
+                                    <Menu
+                                        anchorEl={anchorEl}
+                                        id="account-menu"
+                                        open={openMyAcc}
+                                        onClose={handleCloseMyAccDrop}
+                                        onClick={handleCloseMyAccDrop}
+                                        slotProps={{
+                                        paper: {
+                                            elevation: 0,
+                                            sx: {
+                                            overflow: 'visible',
+                                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                            mt: 1.5,
+                                            '& .MuiAvatar-root': {
+                                                width: 32,
+                                                height: 32,
+                                                ml: -0.5,
+                                                mr: 1,
+                                            },
+                                            '&::before': {
+                                                content: '""',
+                                                display: 'block',
+                                                position: 'absolute',
+                                                top: 0,
+                                                right: 14,
+                                                width: 10,
+                                                height: 10,
+                                                bgcolor: 'background.paper',
+                                                transform: 'translateY(-50%) rotate(45deg)',
+                                                zIndex: 0,
+                                            },
+                                            },
                                         },
-                                        '&::before': {
-                                            content: '""',
-                                            display: 'block',
-                                            position: 'absolute',
-                                            top: 0,
-                                            right: 14,
-                                            width: 10,
-                                            height: 10,
-                                            bgcolor: 'background.paper',
-                                            transform: 'translateY(-50%) rotate(45deg)',
-                                            zIndex: 0,
-                                        },
-                                        },
-                                    },
-                                    }}
-                                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                                    >
-                                    <MenuItem onClick={handleCloseMyAccDrop}>
-                                    <ListItemIcon>
-                                        <FaUser />
-                                    </ListItemIcon>
-                                    My account
-                                    </MenuItem>
-                                    <MenuItem onClick={handleCloseMyAccDrop}>
-                                    <ListItemIcon>
-                                        <IoShieldHalfSharp />
-                                    </ListItemIcon>
-                                    Reset Password
-                                    </MenuItem>
-                                    <MenuItem onClick={handleCloseMyAccDrop}>
-                                    <ListItemIcon>
-                                        <Logout fontSize="small" />
-                                    </ListItemIcon>
-                                    Logout
-                                    </MenuItem>
-                                </Menu>
-                            </div>
+                                        }}
+                                        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                        >
+                                        <MenuItem onClick={handleCloseMyAccDrop}>
+                                        <ListItemIcon>
+                                            <FaUser />
+                                        </ListItemIcon>
+                                        My account
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseMyAccDrop}>
+                                        <ListItemIcon>
+                                            <IoShieldHalfSharp />
+                                        </ListItemIcon>
+                                        Reset Password
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseMyAccDrop}>
+                                        <ListItemIcon>
+                                            <Logout fontSize="small" />
+                                        </ListItemIcon>
+                                        Logout
+                                        </MenuItem>
+                                    </Menu>
+                                </div>
+                            }                            
+
+
                         </div>
                     </div>
                 </div>
