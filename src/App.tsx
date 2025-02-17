@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react"; // Ajout de React ici
+import React, { createContext, useEffect, useState } from "react"; // Ajout de React ici
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Dashboard/DashboardIndex";
@@ -12,8 +12,22 @@ const MyContext = createContext();
 export default function App() {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
 
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
+  const [themeMode, setThemeMode] = useState(true);
+
+
+  useEffect(()=>{
+    if(themeMode===true){
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+      localStorage.setItem('themeMode', 'light');
+    }else{
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+      localStorage.setItem('themeMode', 'dark');
+    }
+  },[themeMode]);
 
 
   const values = {
@@ -22,7 +36,9 @@ export default function App() {
     isLogin,
     setIsLogin,
     isHideSidebarAndHeader,
-    setIsHideSidebarAndHeader
+    setIsHideSidebarAndHeader,
+    themeMode,
+    setThemeMode
   };
 
   return (

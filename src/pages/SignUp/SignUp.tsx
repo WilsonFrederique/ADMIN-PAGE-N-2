@@ -32,6 +32,7 @@ const SignUp = () => {
 
     useEffect(()=>{
         context.setIsHideSidebarAndHeader(true);
+        window.scrollTo(0,0);
     },[]);
 
     const focusInput = (index) => {
@@ -44,7 +45,7 @@ const SignUp = () => {
             <section className='loginSection signUpSection'>
                 <div className="row">
                     <div className="col-md-8 d-flex align-items-center flex-column justify-content-center part1">
-                        <h1>BEST UX/UI FASHION E-COMMECE DASHBOARD & ADMIN PANEL</h1>
+                        <h1>BEST UX/UI FASHION <span className='text-primary'>ECOMMECE DASHBOARD</span> & ADMIN PANEL</h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Iste expedita autem voluptate quaerat, id totam placeat 
@@ -69,7 +70,7 @@ const SignUp = () => {
                                 <form>
                                     <div className={`form-group position-relative ${inputIndex===0 && 'focus'}`}>
                                         <span className="icon"><FaUser /></span>
-                                        <input type="text" className='form-control' placeholder='Enter your name' onFocus={()=>focusInput(0)} onBlur={()=>setInputIndex(null)} />
+                                        <input autoFocus type="text" className='form-control' placeholder='Enter your name' onFocus={()=>focusInput(0)} onBlur={()=>setInputIndex(null)} />
                                     </div>
 
                                     <div className={`form-group position-relative ${inputIndex===1 && 'focus'}`}>

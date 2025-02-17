@@ -69,7 +69,9 @@ const Header = () => {
                         </div>
 
                         <div className="col-sm-7 d-flex align-items-center justify-content-end part3 ps-1">
-                            <Button className="rounded-circle me-3"> <MdOutlineLightMode /> </Button>
+                            <Button className="rounded-circle me-3" onClick={()=>context.setThemeMode(!context.themeMode)}> 
+                                <MdOutlineLightMode /> 
+                            </Button>
 
                             <Button className="rounded-circle me-3" > <IoCartOutline /> </Button>
                             
@@ -96,18 +98,6 @@ const Header = () => {
                                                     height: 32,
                                                     ml: -0.5,
                                                     mr: 1,
-                                                },
-                                                '&::before': {
-                                                    content: '""',
-                                                    display: 'block',
-                                                    position: 'absolute',
-                                                    top: 0,
-                                                    right: 14,
-                                                    width: 10,
-                                                    height: 10,
-                                                    bgcolor: 'background.paper',
-                                                    transform: 'translateY(-50%) rotate(45deg)',
-                                                    zIndex: 0,
                                                 },
                                             },
                                         },
@@ -254,18 +244,6 @@ const Header = () => {
                                                 height: 32,
                                                 ml: -0.5,
                                                 mr: 1,
-                                            },
-                                            '&::before': {
-                                                content: '""',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: 0,
-                                                right: 14,
-                                                width: 10,
-                                                height: 10,
-                                                bgcolor: 'background.paper',
-                                                transform: 'translateY(-50%) rotate(45deg)',
-                                                zIndex: 0,
                                             },
                                             },
                                         },

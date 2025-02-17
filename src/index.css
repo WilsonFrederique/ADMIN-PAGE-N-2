@@ -4,6 +4,8 @@
 
 
 body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important; overflow-x: hidden; }
+/* Mode Sombre */
+body.dark{ background: #071739 !important;}
 
 
 ::-webkit-scrollbar{ width: 5px !important; height: 5px !important; }
@@ -11,6 +13,7 @@ body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important
 ::-webkit-scrollbar-track{ background: transparent !important; }
 
 
+/* base */
 .btn-blue{ background: #0858f7 !important; font-size: 14px !important; font-weight: 600 !important; 
 color: #fff !important; text-transform: capitalize !important; border-radius: 5px !important; 
 border-radius: 8px !important; }
@@ -28,6 +31,9 @@ header{ width: 100%; height: 70px; background: rgba(255, 255, 255, 0.9); positio
 header .logo{ text-decoration: none; }
 header .logo img{ width: 85px; }
 header .logo span{ color: #222222; font-weight: 800; font-size: 25px; }
+/* Dark Mode */
+body.dark header{ background: #112143 !important; }
+body.dark header .logo span{ color: #fff; opacity: 0.8; }
 
 
 
@@ -38,16 +44,23 @@ header button.rounded-circle svg{ color: #292929; font-size: 20px !important;
 transition: all 0.2s ease-in-out; }
 header button.rounded-circle:hover svg{ color: #0858f7 !important; }
 header .part2{ padding-left: 50px; }
+/* Dark Mode */
+body.dark header button.rounded-circle{ background: #1d366d !important; }
+body.dark header button.rounded-circle svg{ color: #fff; }
 
 
 
 /* Input Recherche NavBar */
-/* .searchBox{ width: 400%; height: 40px; background: #f0f5ff; border-radius: 6px; padding: 3px 15px;} */
 .searchBox{ width: 400%; height: 40px; background: #e5ecfc; border-radius: 6px; padding: 3px 15px;}
 .searchBox input{ background: transparent; border: none; outline: none; padding-left: 0px; 
 font-size: 15px; color: #0a0a0a;}
 .searchBox input::-webkit-input-placeholder{ color: rgba(0, 0, 0, 0.8); }
 .searchBox svg{ font-size: 20px; color: #292929; }
+/* Dark Mode */
+body.dark .searchBox{ background: #1d366d; }
+body.dark .searchBox input{ color: #fff; }
+body.dark .searchBox svg{ color: #d3d3d3; }
+body.dark .searchBox input::-webkit-input-placeholder{ color: rgba(209, 209, 209, 0.8); }
 
 
 
@@ -65,6 +78,10 @@ overflow: hidden; width: 100%; height: 100%; cursor: pointer; position: relative
 .myAcc .userInfo{ padding-left: 10px; }
 .myAcc .userInfo h4{ font-size: 15px; font-weight: 600; margin-bottom: 0; color: #292929; }
 .myAcc .userInfo p{ margin-top: 0; font-size: 12px;color: #000; opacity: 0.8; }
+/* Mode Dark */
+body.dark .myAcc .userInfo *{ color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .MuiPaper-elevation{ background: #103177 !important; }
+body.dark .MuiPaper-elevation li *, body.dark .MuiPaper-elevation li{ color: rgba(255, 255, 255, 0.8) !important; }
 
 
 
@@ -89,6 +106,10 @@ margin-bottom: 0; }
 .text-sky{ color: #0858f7; }
 .btn-primary{ background: #0858f7 !important; font-weight: 500 !important; font-size: 14px !important; 
 color: #fff !important; text-transform: capitalize !important; border-radius: 5px !important; }
+/* Dark Mode */
+body.dark .dropdown_list li.MuiButtonBase-root{ background: #112143 !important; }
+body.dark .dropdown_list .head{ color: #fff; }
+body.dark .dropdown_list .head h4{ color: rgba(255, 255, 255, 0.9) !important; }
 
 
 
@@ -103,6 +124,8 @@ transition: all 0.3s; }
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{ width: 3px !important; }
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{ background: transparent !important; }
 .main .sidebarWrapper:hover .sidebar::-webkit-scrollbar{ background: #0858f7 !important; }
+/* Mode Sombre */
+body.dark .main .sidebarWrapper .sidebar{ background: #112143 !important; }
 
 
 
@@ -122,6 +145,11 @@ justify-content: center; width: 25px; height: 25px; transition: all 0.3s ease-in
 .main .sidebarWrapper .sidebar ul li button.active{ background: #f1f1f1 !important; }
 .main .sidebarWrapper .sidebar ul li button.active .icon svg{ fill: #0858f7 !important; }
 .main .sidebarWrapper .sidebar ul li button.active .arrow{ transform: rotate(90deg); color: #0858f7; }
+/* Mode Sombre */
+body.dark .main .sidebarWrapper .sidebar ul li button{ color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .main .sidebarWrapper .sidebar ul li button:hover{ background: rgba(255, 255, 255, 0.1) !important; }
+body.dark .main .sidebarWrapper .sidebar ul li button.active{ background: rgba(255, 255, 255, 0.1) !important; }
+
 
 
 
@@ -139,6 +167,10 @@ display: block; padding: 6px 0; font-size: 14px; font-weight: 500; transition: a
 /* Sous Menu Btn SideBar Affiché */
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapse{ height: auto; overflow: inherit; opacity: 1; }
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu{ opacity: 1; height: auto; }
+/* Mode Sombre */
+body.dark .main .sidebarWrapper .sidebar ul .submenu::before{ background: rgba(255, 255, 255, 0.2) !important; }
+body.dark .main .sidebarWrapper .sidebar ul .submenu li a{ color: rgba(255, 255, 255, 0.7) !important; }
+body.dark .main .sidebarWrapper .sidebar ul .submenu li a:hover{ color: #0858f7 !important; }
 
 
 
@@ -152,6 +184,9 @@ position: absolute; top: -20px; right: -20px; opacity: 0.5; }
 position: absolute; top: 20px; left: 10px; opacity: 0.5; }
 .logoutWrapper .logoutBox button{ font-size: 14px !important; font-weight: 600; }
 .logoutWrapper .logoutBox button svg{ margin-right: 6px; font-size: 18px !important; }
+/* Mode Sombre */
+body.dark .logoutWrapper .logoutBox { background: linear-gradient(rgba(37, 84, 172, 0.25), rgba(14, 42, 102, 0.4)) !important; }
+
 
 
 
@@ -218,6 +253,20 @@ table td .info{ width: 65%; flex: 0 0 65%; }
 .tableFooter{ padding-bottom: 20px; padding-top: 5px; }
 .tableFooter .pagination{ margin-left: auto; }
 .tableFooter p{ font-size: 14px; font-weight: 500; margin-bottom: 0; }
+/* Mode Sombre */
+body.dark .card{ background: #112143; }
+body.dark .table tbody td{ background: transparent; color: rgba(255, 255, 255, 0.9); }
+body.dark .table tbody td, .table-bordered th{ border: 1px solid rgba(255, 255, 255, 0.1); }
+body.dark table td{ color: rgba(255, 255, 255, 0.7) !important; }
+body.dark table tr th{ color: #d6d6d6 !important; }
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root{ color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root:hover{ background: rgba(255, 255, 255, 0.1); }
+body.dark .card .hd{ color: rgba(255, 255, 255, 0.9); }
+body.dark .CardFilters .col-md-3 h4{ color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .MuiSelect-select { color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .MuiMenuItem-root { color: white !important; }
+body.dark .MuiOutlinedInput-root { border-color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgba(255, 255, 255, 0.8) !important; }
 
 
 /* Page Login */
@@ -248,6 +297,9 @@ height: 1px; }
 font-size: 16px; font-weight: 600; width: 35px; height: 35px; border: 1px solid rgba(0, 0, 0, 0.2); 
 border-radius: 50%; }
 .loginWithGoogle{ text-transform: capitalize !important; font-weight: bold !important; }
+/* Mode Sombre */
+body.dark .loginSection .loginBox .wrapper{ background: #112143 !important; }
+
 
 
 /* SIGN UP */

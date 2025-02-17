@@ -10,3 +10,4 @@ Actuellement, deux plugins officiels sont disponibles :
 ## IMAGE POUR LA PAGE D'ADMINISTRATION .
 ![Chargement](./README/images/1.png)
 ![Chargement](./README/images/2.png)
+![Chargement](./README/images/3.png)
