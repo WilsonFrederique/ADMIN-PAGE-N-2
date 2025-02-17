@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import DashboardBox from '../../pages/Dashboard/Componets/DashboardBox'
 
 import Jupe from '../../assets/images/Jupe.jpg'
@@ -23,6 +23,7 @@ import Select from '@mui/material/Select';
 import Pagination from '@mui/material/Pagination';
 
 import { Chart } from "react-google-charts";
+import { MyContext } from '../../App';
 
 
 export const data = [
@@ -53,6 +54,12 @@ const Dashboard = () => {
 
   const [shiwBy, setshiwBy] = useState('');
   const [shiwBysetCatBy, setCatBy] = useState('');
+
+  const context = useContext(MyContext);
+
+  useEffect(()=>{
+    context.setIsHideSidebarAndHeader(false);
+  },[]);
 
 
   return (

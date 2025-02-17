@@ -5,6 +5,7 @@ import Home from "./pages/Dashboard/DashboardIndex";
 import Header from "./components/Header/Header";
 import SidBar from "./components/SidBar/SidBar";
 import Login from "./pages/Login/Login"
+import SignUp from "./pages/SignUp/SignUp";
 
 const MyContext = createContext();
 
@@ -13,6 +14,7 @@ export default function App() {
 
   const [isLogin, setIsLogin] = useState(false);
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
+
 
   const values = {
     isToggleSidebar,
@@ -44,6 +46,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/signUp" element={<SignUp />} />
             </Routes>
           </div>
         </div>

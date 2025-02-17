@@ -16,7 +16,8 @@ color: #fff !important; text-transform: capitalize !important; border-radius: 5p
 border-radius: 8px !important; }
 .btn-lg{ padding: 7px 25px !important; }
 .btn-big{ padding: 10px 25px !important; font-size: 16px !important; }
-.btn-round{ border-radius: 30px !important; }
+.btn-big svg{ font-size: 20px !important; margin-right: 7px !important;  }
+.btn-round{ border-radius: 30px !important;}
 
 .full{ max-width: 100% !important; flex: 0 0 100% !important; width: 100% !important; }
 
@@ -220,11 +221,11 @@ table td .info{ width: 65%; flex: 0 0 65%; }
 
 
 /* Page Login */
-.loginSection{ width: 100%; height: 100vh; padding: 15px 25px; position: relative; }
-.LoginPatern{ width: 100%; height: 100%; opacity: 0.09; position: fixed; top: 0; left: 0; z-index: 99; 
+.loginSection{ background: #bbbbbb !important; width: 100%; height: 100vh; padding: 15px 25px; position: relative; }
+.LoginPatern{ width: 100%; height: 100%; opacity: 0.19; position: fixed; top: 0; left: 0; z-index: 99; 
 pointer-events: none; }
 .loginSection .loginBox{ width: 350px; height: auto; margin: auto; }
-.loginSection .loginBox .wrapper{ width: 100%; height: auto; background: #bbbbbb; z-index: 100; 
+.loginSection .loginBox .wrapper{ width: 100%; height: auto; background: #f0f0f0; z-index: 100; 
 position: relative; padding: 35px; }
 .loginSection .loginBox .wrapper .form-group{ margin-bottom: 18px; }
 .loginSection .loginBox .wrapper .form-control{ background: #fff !important; box-shadow: none !important; 
@@ -247,3 +248,14 @@ height: 1px; }
 font-size: 16px; font-weight: 600; width: 35px; height: 35px; border: 1px solid rgba(0, 0, 0, 0.2); 
 border-radius: 50%; }
 .loginWithGoogle{ text-transform: capitalize !important; font-weight: bold !important; }
+
+
+/* SIGN UP */
+.signUpSection{ background: #bbbbbb !important; padding: 0px 0 !important; height: auto !important; }
+.signUpSection .loginBox{ background: #f0f0f0 !important; position: relative; z-index: 100; 
+width: 100% !important; padding: 25px 25px; }
+.signUpSection .loginBox .wrapper{ border: 0px !important; background: transparent !important; 
+padding-top: 10px !important; }
+.signUpSection .part1{ padding-left: 95px; padding-right: 100px; }
+.signUpSection .part1 h1{ font-size: 50px !important; font-weight: 800; }
+.signUpSection .part1 p{ font-size: 16px !important; font-weight: 500;}
