@@ -239,7 +239,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#2</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -277,7 +277,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#3</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -315,7 +315,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#4</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -353,7 +353,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#5</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -391,7 +391,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#6</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -429,7 +429,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#7</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -467,7 +467,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#8</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -505,7 +505,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#9</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -543,7 +543,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#10</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
@@ -581,7 +581,7 @@ const Dashboard = () => {
                   </tr>
 
                   <tr>
-                    <td>#1</td>
+                    <td>#11</td>
                     <td>
                       <div className="d-flex align-items-center productBox">
                         <div className="imgWrapper">
