@@ -194,6 +194,7 @@ body.dark .logoutWrapper .logoutBox { background: linear-gradient(rgba(37, 84, 1
 .main .content{ width: 80%; flex: 0 0 80%; transition: all 0.3; }
 .main .content.toggle{ width: 100%; flex: 0 0 100%; }
 .right-content{ padding: 84px 20px; padding-bottom: 10px; }
+.dashboardBoxWrapper-produts{ gap: 20px; width: 100%; display: flex; }
 .dashboardBoxWrapper{ gap: 20px; width: 100%; flex-wrap: wrap; }
 .dashboardBoxWrapper .dashboardBox{ width: 48%; height: 170px; border-radius: 10px; overflow: hidden; padding: 20px; 
 display: flex; flex-direction: column; justify-content: space-around; text-align: left !important; position: relative; 
@@ -311,3 +312,10 @@ padding-top: 10px !important; }
 .signUpSection .part1{ padding-left: 95px; padding-right: 100px; }
 .signUpSection .part1 h1{ font-size: 50px !important; font-weight: 800; }
 .signUpSection .part1 p{ font-size: 16px !important; font-weight: 500;}
+
+
+/* PRODUITS DETAILS */
+body.dark .card h5{ color: #f0f0f0; }
+body.dark .card .breadcrumb_ .StyledBreadcrumb{ background: #103177 !important; color: #f0f0f0 !important; }
+body.dark .card .breadcrumb_ .StyledBreadcrumb svg{ color: #f0f0f0 !important; }
+body.dark .MuiBreadcrumbs-separator{ color: #f0f0f0; }
