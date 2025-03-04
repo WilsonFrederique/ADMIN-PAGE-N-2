@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import SidBar from "./components/SidBar/SidBar";
 import Login from "./pages/Login/Login"
 import SignUp from "./pages/SignUp/SignUp";
+import Products from "./pages/Products/Products";
+import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 
 const MyContext = createContext();
 
@@ -63,6 +65,8 @@ export default function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signUp" element={<SignUp />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/details" element={<ProductDetails />} />
             </Routes>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import DashboardBox from '../../pages/Dashboard/Componets/DashboardBox'
 
 import Jupe from '../../assets/images/Jupe.jpg'
@@ -231,7 +232,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -269,7 +272,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -307,7 +312,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -345,7 +352,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -383,7 +392,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -421,7 +432,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -459,7 +472,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -497,7 +512,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -535,7 +552,9 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
@@ -573,50 +592,15 @@ const Dashboard = () => {
                     <td>$30k</td>
                     <td>
                       <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
+                          <Link to="/products/details">
+                              <Button className='secondary' color="secondary"><FaEye /></Button>
+                          </Link>
                           <Button className='success' color="success"><FaPencilAlt /></Button>
                           <Button className='error' color="error"><MdDelete /></Button>
                       </div>
                     </td>
                   </tr>
 
-                  <tr>
-                    <td>#11</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
-                          </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Button className='secondary' color="secondary"><FaEye /></Button>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
 
