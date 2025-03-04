@@ -76,7 +76,7 @@ overflow: hidden; width: 100%; height: 100%; cursor: pointer; position: relative
 
 /* Profil Nom et Prenom Admin NavBar */
 .myAcc .userInfo{ padding-left: 10px; }
-.myAcc .userInfo h4{ font-size: 15px; font-weight: 600; margin-bottom: 0; color: #292929; }
+.myAcc .userInfo h4{ font-size: 15px; font-weight: 600; margin-bottom: 0; color: #292929; line-height: 24px !important; }
 .myAcc .userInfo p{ margin-top: 0; font-size: 12px;color: #000; opacity: 0.8; }
 /* Mode Dark */
 body.dark .myAcc .userInfo *{ color: rgba(255, 255, 255, 0.8) !important; }
@@ -315,7 +315,64 @@ padding-top: 10px !important; }
 
 
 /* PRODUITS DETAILS */
-body.dark .card h5{ color: #f0f0f0; }
+h4{ line-height: 32px !important; }
+p{ font-weight: 300; font-size: 15px; line-height: 25px; }
 body.dark .card .breadcrumb_ .StyledBreadcrumb{ background: #103177 !important; color: #f0f0f0 !important; }
 body.dark .card .breadcrumb_ .StyledBreadcrumb svg{ color: #f0f0f0 !important; }
 body.dark .MuiBreadcrumbs-separator{ color: #f0f0f0; }
+/* image */
+.slick-slide{ outline: none; }
+.h-img-Slider{ height: 5em !important; }
+.sliderSml .slick-slide{ padding-right: 5px; }
+.sliderSml .slick-slide .item{ border-radius: 7px !important; overflow: hidden; border: 2px dashed rgba(209, 209, 209, 0.8); 
+cursor: pointer !important; }
+.sliderSml .slick-current .item{ border: 2px solid #ccc !important; }
+.sliderSml *, .sliderBig *{ transition: all 0.2s !important; }
+.sliderBig .item { overflow: hidden; border-radius: 7px; border: 2px dashed rgba(209, 209, 209, 0.8); height: 410px !important; 
+display: flex; justify-content: center; align-items: center; }
+.sliderBig .item img { object-fit: cover !important; width: 100%; height: 100%; }
+/* Info */
+.productDetailsSection .productInfo .icon{ width: 28%; flex: 0 0 28%; }
+.productDetailsSection .productInfo .icon svg{ font-size: 22px; color: rgba(6, 6, 6, 0.8) !important;  }
+.productDetailsSection .productInfo .row{ margin-bottom: 10px !important; }
+.productDetailsSection .productInfo .name{ width: 72%; flex: 0 0 72%; font-weight: 600; font-size: 15px; 
+color: rgba(10, 10, 10, 0.8) !important; }
+.productDetailsSection .productInfo .row .col-sm-7{ display: flex; align-items: center; }
+.productDetailsSection .productInfo .row .col-sm-7 span{ opacity: 0.8; font-size: 15px;  padding: 5px !important; }
+.tags{ margin-bottom: 0px !important; }
+.tags li span{ display: flex; align-items: center; justify-content: center; background: #dde7fd !important; 
+border-radius: 5px !important; font-size: 13px !important; }
+/* Progress */
+.retingSection{ width: 500px !important; }
+.retingSection .retingrow{ width: 100% !important; margin-bottom: 15px !important; }
+.retingSection .retingrow .progress{ height: 6px !important; background: #e4e4e4f6; }
+.retingSection .retingrow .progress .progress-bar{ background: #edb213; }
+.retingSection .retingrow .col1{ width: 13% !important; flex: 0 0 13% !important; display: flex; }
+.retingSection .retingrow .col2{ width: 50% !important; flex: 0 0 50% !important; }
+.retingSection .retingrow .col3{ width: 25% !important; flex: 0 0 25% !important; display: flex; 
+padding-left: 20px !important; }
+/* Theme Sombre */
+body.dark .card *{ color: #f0f0f0ec; }
+body.dark .tags li span{ display: flex; align-items: center; justify-content: center; background: #1b2b4d !important; 
+border-radius: 5px !important; font-size: 13px !important; }
+body.dark .productDetailsSection .productInfo .name{ width: 72%; flex: 0 0 72%; font-weight: 600; font-size: 15px; 
+color: rgba(255, 255, 255, 0.8) !important; }
+body.dark .retingSection .retingrow .progress{ height: 6px !important; background: #2f4577; }
+/* Customer reviews */
+.reviewsSection{ width: 100%; display: flex; flex-direction: column; }
+.reviewsSection .reviewsRow{ width: 100%; height: auto; background: #e2e1e1; padding: 35px; border-radius: 10px; margin: 15px 0; }
+.userImg.lg{ width: 55px !important; height: 55px !important; }
+.userInfo h6{ margin-bottom: 0  ; }
+.reviewsRow-avatar-and-btn{ display: flex; justify-content: space-between !important; }
+.reviewsSection .reviewsRow.reply{ width: 90%; margin-left: auto; }
+.reviewsSection .reviewsRow .btn-big{ font-size: 15px !important; }
+.reviewsSection .reviewsRow .btn-big svg{ font-size: 18px !important; }
+/* textarea */
+.reviewForm{ width: 100%; }
+.reviewForm textarea{ width: 100% !important; height: 200px !important; background: #f9f8f8 !important; outline: navajowhite !important; 
+padding: 15px !important; border-radius: 10px !important; color: rgba(0, 0, 0, 0.7) !important; border: 1px solid #b7b7b7; }
+.reviewForm textarea::-webkit-input-placeholder{ color: rgba(0, 0, 0, 0.5) !important; }
+/* Theme Sombre */
+body.dark .reviewsSection .reviewsRow{ background: #071739; }
+body.dark .reviewForm textarea{  background: #0e1e3f !important; color: rgba(255, 255, 255, 0.7) !important; border: 1px solid #283c67; }
+body.dark .reviewForm textarea::-webkit-input-placeholder{ color: rgba(255, 255, 255, 0.5) !important; }

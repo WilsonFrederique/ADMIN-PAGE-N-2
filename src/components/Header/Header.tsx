@@ -6,6 +6,7 @@ import Profil2 from '../../assets/images/Profil2.png'
 
 import { Link } from 'react-router-dom'
 import SearachBox from '../SearachBox/SearachBox';
+import UserAvatarImg from '../userAvatarImg/UserAvatarImg';
 
 import Button from '@mui/material/Button';
 
@@ -215,11 +216,9 @@ const Header = () => {
                                 : 
                                 <div className="myAccWrapper">
                                     <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop} >
-                                        <div className="userImg">
-                                            <span className="rounded-circle">
-                                                <img src={Profil} alt="Profil" />
-                                            </span>
-                                        </div>
+                                        
+                                        {/* Avatar */}
+                                        <UserAvatarImg img={Profil} />
 
                                         <div className="userInfo">
                                             <h4>Walle Fred</h4>
