@@ -22,6 +22,8 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Pagination from '@mui/material/Pagination';
+import Checkbox from '@mui/material/Checkbox';
+import Rating from '@mui/material/Rating';
 
 import { Chart } from "react-google-charts";
 import { MyContext } from '../../App';
@@ -62,6 +64,12 @@ const Dashboard = () => {
     context.setIsHideSidebarAndHeader(false);
     window.scrollTo(0,0);
   },[]);
+
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+
+  const [rotingsValue, setRotingsValue] = useState(3);
 
 
   return (
@@ -193,412 +201,412 @@ const Dashboard = () => {
                     <th>BRAND</th>
                     <th>PRICE</th>
                     <th>STOCK</th>
-                    <th>RATING</th>
                     <th>ORDER</th>
                     <th>SALES</th>
+                    <th>RATING</th>
                     <th>ACTION</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   <tr>
-                    <td>#1</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #1</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#2</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #2</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#3</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #3</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#4</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #4</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#5</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #5</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#6</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #6</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#7</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #7</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#8</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #8</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#9</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #9</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                   <tr>
-                    <td>#10</td>
-                    <td>
-                      <div className="d-flex align-items-center productBox">
-                        <div className="imgWrapper">
-                          <div className="img">
-                            <img src={Jupe} alt="Jupe" className='w-100' />
+                      <td><Checkbox {...label} /> #10</td>
+                      <td>
+                          <div className="d-flex align-items-center productBox">
+                              <div className="imgWrapper">
+                                  <div className="img">
+                                      <img src={Jupe} alt="Jupe" className='w-100' />
+                                  </div>
+                              </div>
+                              <div className="info ps-0">
+                                  <h6>Tops and skirt set for Female</h6>
+                                  <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                              </div>
                           </div>
-                        </div>
-                        <div className="info ps-0">
-                          <h6>Tops and skirt set for Fealem</h6>
-                          <p>
-                            Women's exclisive summer Tops and skirt set for Female Tops and skirt set
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>womans</td>
-                    <td>richman</td>
-                    <td>
-                      <div style={{width:'70px'}}>
-                        <del className="text-decoration-line-through old">$21.00</del>
-                        <span className='new text-danger'>$21.00</span>
-                      </div>
-                    </td>
-                    <td>30</td>
-                    <td>3.9(15)</td>
-                    <td>380</td>
-                    <td>$30k</td>
-                    <td>
-                      <div className="actions d-flex align-items-center">
-                          <Link to="/products/details">
-                              <Button className='secondary' color="secondary"><FaEye /></Button>
-                          </Link>
-                          <Button className='success' color="success"><FaPencilAlt /></Button>
-                          <Button className='error' color="error"><MdDelete /></Button>
-                      </div>
-                    </td>
+                      </td>
+                      <td>Women's</td>
+                      <td>Richman</td>
+                      <td>
+                          <div style={{width:'70px'}}>
+                              <del className="text-decoration-line-through old">$21.00</del>
+                              <span className='new text-danger'>$21.00</span>
+                          </div>
+                      </td>
+                      <td>30</td>
+                      <td>380</td>
+                      <td>$30k</td>
+                      <td>
+                        <Rating name="read-only" value={rotingsValue} readOnly />
+                      </td>
+                      <td>
+                          <div className="actions d-flex align-items-center">
+                              <Link to="/products/details">
+                                  <Button className='secondary' color="secondary"><FaEye /></Button>
+                              </Link>
+                              <Button className='success' color="success"><FaPencilAlt /></Button>
+                              <Button className='error' color="error"><MdDelete /></Button>
+                          </div>
+                      </td>
                   </tr>
 
                 </tbody>

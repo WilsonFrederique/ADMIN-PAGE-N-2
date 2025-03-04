@@ -8,6 +8,7 @@ import { emphasize, styled } from '@mui/material/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 import Slider from "react-slick";
@@ -113,6 +114,7 @@ export const ProductDetails = () => {
                         <StyledBreadcrumb 
                             className='StyledBreadcrumb' 
                             label="Product View"
+                            icon={<ExpandMoreIcon fontSize="small" />}
                         />
                     </Breadcrumbs>
                 </div>

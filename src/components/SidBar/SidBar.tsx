@@ -48,8 +48,8 @@ const SidBar = () => {
                         <div className={`submenuWrapper ${activeTab===1 && isToggleSubmenu===true ? 'colapse' : 'colapsed'}`}>
                             <ul className="submenu">
                                 <li><Link to="/products">Product List</Link></li>
-                                <li><Link to="#">Product View</Link></li>
-                                <li><Link to="#">Product Upload</Link></li>
+                                <li><Link to="/products/details">Product View</Link></li>
+                                <li><Link to="/products/upload">Product Upload</Link></li>
                             </ul>
                         </div>
                     </li>
