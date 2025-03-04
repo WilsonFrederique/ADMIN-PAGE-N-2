@@ -7,6 +7,7 @@ import SidBar from "./components/SidBar/SidBar";
 import Login from "./pages/Login/Login"
 import SignUp from "./pages/SignUp/SignUp";
 import Products from "./pages/Products/Products";
+import ProductUpload from "./pages/ProductUpload/ProductUpload";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 
 const MyContext = createContext();
@@ -67,6 +68,7 @@ export default function App() {
               <Route path="/signUp" element={<SignUp />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/details" element={<ProductDetails />} />
+              <Route path="/products/upload" element={<ProductUpload />} />
             </Routes>
           </div>
         </div>

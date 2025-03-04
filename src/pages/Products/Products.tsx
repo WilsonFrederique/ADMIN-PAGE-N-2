@@ -20,6 +20,8 @@ import { emphasize, styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Checkbox from '@mui/material/Checkbox';
+import Rating from '@mui/material/Rating';
 
 import DashboardBox from '../../pages/Dashboard/Componets/DashboardBox';
 
@@ -81,6 +83,13 @@ const Products = () => {
         }
     });
 
+
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+
+     const [rotingsValue, setRotingsValue] = useState(3);
+
+
     return (
         <>
             <div className="right-content w-100">
@@ -96,7 +105,7 @@ const Products = () => {
                         />
                         <StyledBreadcrumb 
                             className='StyledBreadcrumb' 
-                            label="Dashboard"
+                            label="Product List"
                             icon={<ExpandMoreIcon fontSize="small" />}
                         />
                     </Breadcrumbs>
@@ -174,16 +183,16 @@ const Products = () => {
                                     <th>BRAND</th>
                                     <th>PRICE</th>
                                     <th>STOCK</th>
-                                    <th>RATING</th>
                                     <th>ORDER</th>
                                     <th>SALES</th>
+                                    <th>RATING</th>
                                     <th>ACTION</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {/* Rows */}
                                 <tr>
-                                    <td>#1</td>
+                                    <td><Checkbox {...label} /> #1</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -206,47 +215,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
                                     <td>
-                                        <div className="actions d-flex align-items-center">
-                                            <Link to="/products/details">
-                                                <Button className='secondary' color="secondary"><FaEye /></Button>
-                                            </Link>
-                                            <Button className='success' color="success"><FaPencilAlt /></Button>
-                                            <Button className='error' color="error"><MdDelete /></Button>
-                                        </div>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
                                     </td>
-                                </tr>
-                                
-                                <tr>
-                                    <td>#2</td>
-                                    <td>
-                                        <div className="d-flex align-items-center productBox">
-                                            <div className="imgWrapper">
-                                                <div className="img">
-                                                    <img src={Jupe} alt="Jupe" className='w-100' />
-                                                </div>
-                                            </div>
-                                            <div className="info ps-0">
-                                                <h6>Tops and skirt set for Female</h6>
-                                                <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>Women's</td>
-                                    <td>Richman</td>
-                                    <td>
-                                        <div style={{width:'70px'}}>
-                                            <del className="text-decoration-line-through old">$21.00</del>
-                                            <span className='new text-danger'>$21.00</span>
-                                        </div>
-                                    </td>
-                                    <td>30</td>
-                                    <td>3.9(15)</td>
-                                    <td>380</td>
-                                    <td>$30k</td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -259,7 +232,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#3</td>
+                                    <td><Checkbox {...label} /> #2</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -282,9 +255,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -297,7 +272,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#4</td>
+                                    <td><Checkbox {...label} /> #3</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -320,9 +295,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -335,7 +312,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#5</td>
+                                    <td><Checkbox {...label} /> #4</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -358,9 +335,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -373,7 +352,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#6</td>
+                                    <td><Checkbox {...label} /> #5</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -396,9 +375,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -411,7 +392,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#7</td>
+                                    <td><Checkbox {...label} /> #6</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -434,9 +415,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -449,7 +432,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#8</td>
+                                    <td><Checkbox {...label} /> #7</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -472,9 +455,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -487,7 +472,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#9</td>
+                                    <td><Checkbox {...label} /> #8</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -510,9 +495,11 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
@@ -525,7 +512,7 @@ const Products = () => {
                                 </tr>
 
                                 <tr>
-                                    <td>#10</td>
+                                    <td><Checkbox {...label} /> #9</td>
                                     <td>
                                         <div className="d-flex align-items-center productBox">
                                             <div className="imgWrapper">
@@ -548,9 +535,51 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>30</td>
-                                    <td>3.9(15)</td>
                                     <td>380</td>
                                     <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
+                                    <td>
+                                        <div className="actions d-flex align-items-center">
+                                            <Link to="/products/details">
+                                                <Button className='secondary' color="secondary"><FaEye /></Button>
+                                            </Link>
+                                            <Button className='success' color="success"><FaPencilAlt /></Button>
+                                            <Button className='error' color="error"><MdDelete /></Button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><Checkbox {...label} /> #10</td>
+                                    <td>
+                                        <div className="d-flex align-items-center productBox">
+                                            <div className="imgWrapper">
+                                                <div className="img">
+                                                    <img src={Jupe} alt="Jupe" className='w-100' />
+                                                </div>
+                                            </div>
+                                            <div className="info ps-0">
+                                                <h6>Tops and skirt set for Female</h6>
+                                                <p>Women's exclusive summer Tops and skirt set for Female Tops and skirt set</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Women's</td>
+                                    <td>Richman</td>
+                                    <td>
+                                        <div style={{width:'70px'}}>
+                                            <del className="text-decoration-line-through old">$21.00</del>
+                                            <span className='new text-danger'>$21.00</span>
+                                        </div>
+                                    </td>
+                                    <td>30</td>
+                                    <td>380</td>
+                                    <td>$30k</td>
+                                    <td>
+                                        <Rating name="read-only" value={rotingsValue} readOnly />
+                                    </td>
                                     <td>
                                         <div className="actions d-flex align-items-center">
                                             <Link to="/products/details">
