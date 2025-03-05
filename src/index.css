@@ -7,6 +7,8 @@ body{ font-family: "Open Sans", serif !important; background: #e2e1e1 !important
 /* Mode Sombre */
 body.dark{ background: #071739 !important;}
 
+.menu-2{ display: none !important; }
+
 
 ::-webkit-scrollbar{ width: 5px !important; height: 5px !important; }
 ::-webkit-scrollbar-thumb{ background: #0858f7 !important; border-radius: 10px; }

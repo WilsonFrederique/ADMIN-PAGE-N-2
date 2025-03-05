@@ -17,6 +17,8 @@ export default function App() {
 
   const [isLogin, setIsLogin] = useState(true);
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isOpenNav, setIsOpenNav] = useState(false);
   const [themeMode, setThemeMode] = useState(true);
 
 
@@ -33,6 +35,24 @@ export default function App() {
   },[themeMode]);
 
 
+  useEffect(()=> {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    }
+    
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  })
+
+
+  const openNav=()=>{
+    setIsOpenNav(true);
+  }
+
+
   const values = {
     isToggleSidebar,
     setIsToggleSidebar,
@@ -41,7 +61,11 @@ export default function App() {
     isHideSidebarAndHeader,
     setIsHideSidebarAndHeader,
     themeMode,
-    setThemeMode
+    setThemeMode,
+    windowWidth,
+    openNav,
+    isOpenNav,
+    setIsOpenNav
   };
 
   return (
@@ -55,9 +79,12 @@ export default function App() {
         <div className="main d-flex">
           {
             isHideSidebarAndHeader !== true && 
-            <div className={`sidebarWrapper ${isToggleSidebar ? "toggle" : ""}`}>
-              <SidBar />
-            </div>
+            <>
+              <div className={`sidebarOverlay d-none ${isOpenNav===true && 'show'}`} onClick={()=>setIsOpenNav(false)}></div>
+              <div className={`sidebarWrapper ${isToggleSidebar ? "toggle" : ""} ${isOpenNav===true ? 'open' : ''}`}>
+                <SidBar />
+              </div>
+            </>
           }
 
           <div className={`content ${isHideSidebarAndHeader === true && 'full'} ${isToggleSidebar === true ? "toggle" : ""}`}>
