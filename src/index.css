@@ -302,6 +302,13 @@ border-radius: 50%; }
 .loginWithGoogle{ text-transform: capitalize !important; font-weight: bold !important; }
 /* Mode Sombre */
 body.dark .loginSection .loginBox .wrapper{ background: #112143 !important; }
+body.dark .loginSection { background: #25314a21 !important; }
+body.dark .h5, h5{ color: #f0f0f0 !important; }
+body.dark .icon svg{ color: #112143 !important; }
+body.dark body.dark .card{ color: #112143 !important; }
+body.dark .loginSection .loginBox .wrapper .form-control:focus{ color: #112143 !important; }
+body.dark .loginSection .loginBox .wrapper .or span.line{ background: #f0f0f035 !important; }
+body.dark .loginSection .loginBox .wrapper .or span.text{ border: 1px solid #f0f0f035 !important; }
 
 
 
@@ -314,6 +321,10 @@ padding-top: 10px !important; }
 .signUpSection .part1{ padding-left: 95px; padding-right: 100px; }
 .signUpSection .part1 h1{ font-size: 50px !important; font-weight: 800; }
 .signUpSection .part1 p{ font-size: 16px !important; font-weight: 500;}
+/* Mode Sombre */
+body.dark .signUpSection .loginBox{ background: #112143 !important; }
+body.dark .signUpSection .part1 h1 { color: #f0f0f0 !important; }
+body.dark .signUpSection .part1 p { color: #cfcfcf !important; }
 
 
 /* PRODUITS DETAILS */
