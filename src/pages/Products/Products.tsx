@@ -100,7 +100,7 @@ const Products = () => {
                             className='StyledBreadcrumb' 
                             component="a"
                             href="#"
-                            label="Dashboard"
+                            label="Dash..."
                             icon={<HomeIcon fontSize='small' />}
                         />
                         <StyledBreadcrumb 

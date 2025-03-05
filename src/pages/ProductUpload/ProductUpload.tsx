@@ -67,7 +67,7 @@ const ProductUpload = () => {
                             className='StyledBreadcrumb' 
                             component="a"
                             href="#"
-                            label="Dashboard"
+                            label="Dash..."
                             icon={<HomeIcon fontSize='small' />}
                         />
                         <StyledBreadcrumb 
@@ -78,7 +78,7 @@ const ProductUpload = () => {
                         />
                         <StyledBreadcrumb 
                             className='StyledBreadcrumb' 
-                            label="Product Upload"
+                            label="Upload"
                             icon={<ExpandMoreIcon fontSize="small" />}
                         />
                     </Breadcrumbs>
@@ -252,76 +252,6 @@ const ProductUpload = () => {
                                 <div className="imagesUploadSec">
                                     <h5 className='mb-4'>Media and published</h5>
                                     <div className="imgUploadBox d-flex align-items-center">
-                                        <div className="uploadBox">
-                                            <span className="remove">
-                                                <IoClose className='svg' />
-                                            </span>
-                                            <div className="box">
-                                                <LazyLoadImage 
-                                                    alt={"image"}
-                                                    effect="blur"
-                                                    className="w-100"
-                                                    src={Jupe}
-                                                />
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="uploadBox">
-                                            <span className="remove">
-                                                <IoClose className='svg' />
-                                            </span>
-                                            <div className="box">
-                                                <LazyLoadImage 
-                                                    alt={"image"}
-                                                    effect="blur"
-                                                    className="w-100"
-                                                    src={Jupe}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="uploadBox">
-                                            <span className="remove">
-                                                <IoClose className='svg' />
-                                            </span>
-                                            <div className="box">
-                                                <LazyLoadImage 
-                                                    alt={"image"}
-                                                    effect="blur"
-                                                    className="w-100"
-                                                    src={Jupe}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="uploadBox">
-                                            <span className="remove">
-                                                <IoClose className='svg' />
-                                            </span>
-                                            <div className="box">
-                                                <LazyLoadImage 
-                                                    alt={"image"}
-                                                    effect="blur"
-                                                    className="w-100"
-                                                    src={Jupe}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="uploadBox">
-                                            <span className="remove">
-                                                <IoClose className='svg' />
-                                            </span>
-                                            <div className="box">
-                                                <LazyLoadImage 
-                                                    alt={"image"}
-                                                    effect="blur"
-                                                    className="w-100"
-                                                    src={Jupe}
-                                                />
-                                            </div>
-                                        </div>
-
                                         <div className="uploadBox">
                                             <span className="remove">
                                                 <IoClose className='svg' />

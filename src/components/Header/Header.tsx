@@ -13,10 +13,11 @@ import Button from '@mui/material/Button';
 import { MdMenuOpen } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaRegBell } from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
+
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -54,7 +55,7 @@ const Header = () => {
         <>
             <header className='d-flex align-items-center'>
                 <div className="container-fluid w-100">
-                    <div className="row d-flex align-items-center w-100">
+                    <div className="row d-flex align-items-center w-100 ">
                         <div className="col-sm-2 part1">
                             <Link to="/" className='d-flex align-items-center logo'>
                                 <img src={Logo} alt="Logo" />
@@ -62,12 +63,16 @@ const Header = () => {
                             </Link>
                         </div>
 
-                        <div className="col-sm-3 d-flex align-items-center part2 padding">
-                            <Button className='rounded-circle me-3' onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}>
-                                {context.isToggleSidebar ? <MdMenuOpen /> : <MdOutlineMenu />}
-                            </Button>
-                            <SearachBox />
-                        </div>
+                        {/* Responsive */}
+                        {
+                            context.windowWidth> 992 && 
+                                <div className="col-sm-3 d-flex align-items-center part2 padding res-hide">
+                                    <Button className='rounded-circle me-3' onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                                        {context.isToggleSidebar ? <MdMenuOpen /> : <MdOutlineMenu />}
+                                    </Button>
+                                    <SearachBox />
+                                </div>      
+                        }
 
                         <div className="col-sm-7 d-flex align-items-center justify-content-end part3 ps-1">
                             <Button className="rounded-circle me-3" onClick={()=>context.setThemeMode(!context.themeMode)}> 
@@ -79,7 +84,11 @@ const Header = () => {
                             <Button className="rounded-circle me-3"> <MdOutlineMailOutline /> </Button>
 
                             <div className="dropdownWrapper position-relative">
-                                <Button className="rounded-circle me-3" onClick={handleOpenNotificationsMyAccDrop}> <FaRegBell /> </Button>
+                                <div className="d-flex align-items-center">
+                                    <Button className="rounded-circle me-3" onClick={handleOpenNotificationsMyAccDrop}> <FaRegBell /> </Button>
+
+                                    <Button className="rounded-circle me-3 menu-2" onClick={()=>context.openNav()}> <IoMenu /> </Button>
+                                </div>
                                 <Menu
                                     anchorEl={isOpenNotificationDrop}
                                     className='notifications dropdown_list'
@@ -220,7 +229,7 @@ const Header = () => {
                                         {/* Avatar */}
                                         <UserAvatarImg img={Profil} />
 
-                                        <div className="userInfo">
+                                        <div className="userInfo res-hide">
                                             <h4>Walle Fred</h4>
                                             <p className='mb-0'>Admin</p>
                                         </div>

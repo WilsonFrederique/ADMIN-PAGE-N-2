@@ -95,14 +95,14 @@ export const ProductDetails = () => {
     return (
         <>
             <div className="right-content w-100">
-                <div className="card shadow border-0 w-100 flex-row p-4">
+                <div className="card shadow border-0 w-100 flex-row p-4 res-col">
                     <h5 className="mb-0">Product View</h5>
                     <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumb_">
                         <StyledBreadcrumb 
                             className='StyledBreadcrumb' 
                             component="a"
                             href="#"
-                            label="Dashboard"
+                            label="Dash..."
                             icon={<HomeIcon fontSize="small" />}
                         />
                         <StyledBreadcrumb 
@@ -113,7 +113,7 @@ export const ProductDetails = () => {
                         />
                         <StyledBreadcrumb 
                             className='StyledBreadcrumb' 
-                            label="Product View"
+                            label="View"
                             icon={<ExpandMoreIcon fontSize="small" />}
                         />
                     </Breadcrumbs>
