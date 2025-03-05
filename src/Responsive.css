@@ -57,6 +57,7 @@
     .dashboardBoxWrapper .dashboardBox:last-child{ margin-bottom: 1.5em !important; }
     .graphBox{ margin-left: 0.45em; }
 
+    /* ProduitList */
     .dashboardBoxWrapper-produts { width: 100% !important; display: flex; flex-direction: column; }
 }
 
