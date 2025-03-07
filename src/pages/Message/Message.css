@@ -1,0 +1,12 @@
+.chat{
+    place-items: center;
+}
+
+.chat-container{
+    width: 100%;
+    height: 70vh;
+    max-width: 100%;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
