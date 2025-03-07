@@ -126,7 +126,12 @@ const Products = () => {
 
                 {/* Card */}
                 <div className="card shadow border-0 p-3 mt-4">
-                    <h3 className="hd">Best Selling Products</h3>
+                    <div className='d-flex add-product'>
+                        <h3 className="hd">Produits les plus vendus</h3>
+                        <Link to="">
+                            <Button className='btn-blue btn-lg'>Ajouter</Button>
+                        </Link>
+                    </div>
 
                     {/* Input */}
                     <div className="row CardFilters mt-3">
@@ -138,6 +143,48 @@ const Products = () => {
                                     onChange={(e)=>setShowBy(e.target.value)}
                                     displayEmpty
                                     inputProps={{ 'aria-label': 'Without label' }}
+                                    className='w-100'
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    <MenuItem value={10}>Ten</MenuItem>
+                                    <MenuItem value={20}>Twenty</MenuItem>
+                                    <MenuItem value={30}>Thirty</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+
+                        <div className="col-md-3">
+                            <h4>CATEGORY BY</h4>
+                            <FormControl size="small" className='w-100'>
+                                <Select
+                                    value={showBySetCatBy}
+                                    onChange={(e)=>setCatBy(e.target.value)}
+                                    displayEmpty
+                                    inputProps={{ 'aria-label': 'Without label' }}
+                                    labelId="demo-select-small-label"
+                                    className='w-100'
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    <MenuItem value={10}>Ten</MenuItem>
+                                    <MenuItem value={20}>Twenty</MenuItem>
+                                    <MenuItem value={30}>Thirty</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+
+                        <div className="col-md-3">
+                            <h4>CATEGORY BY</h4>
+                            <FormControl size="small" className='w-100'>
+                                <Select
+                                    value={showBySetCatBy}
+                                    onChange={(e)=>setCatBy(e.target.value)}
+                                    displayEmpty
+                                    inputProps={{ 'aria-label': 'Without label' }}
+                                    labelId="demo-select-small-label"
                                     className='w-100'
                                 >
                                     <MenuItem value="">

@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react'
 
 import Logo from '../../assets/images/Logo2.png'
-import Profil from '../../assets/images/Profil.jpg'
+import Profil from '../../assets/images/Profil.png'
 import Profil2 from '../../assets/images/Profil2.png'
 
 import { Link } from 'react-router-dom'
@@ -231,7 +231,7 @@ const Header = () => {
 
                                         <div className="userInfo res-hide">
                                             <h4>Walle Fred</h4>
-                                            <p className='mb-0'>Admin</p>
+                                            <p className='mb-0'>Administrateur</p>
                                         </div>
                                     </Button>
                                     <Menu
