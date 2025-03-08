@@ -1,7 +1,7 @@
 .ls{
-    background: #cfcfcf !important;
+    background: #f0efef !important;
     color: #fff !important;
-    height: 70vh !important;
+    height: 65vh !important;
 }
 
 body.dark .ls{
@@ -30,7 +30,7 @@ body.dark .ls{
 }
 
 .ls-search{
-    background-color: #b5b7bb !important;
+    background-color: #c9ced7 !important;
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;

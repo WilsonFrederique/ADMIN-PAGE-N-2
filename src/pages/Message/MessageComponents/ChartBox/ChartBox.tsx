@@ -1,7 +1,6 @@
 import './ChartBox.css';
 
-import { TbPointFilled } from "react-icons/tb";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { TbHelpHexagon } from "react-icons/tb";
 import { CiImageOn } from "react-icons/ci";
 import { IoMdSend } from "react-icons/io";
 
@@ -14,7 +13,7 @@ const ChartBox = () => {
       <div className="chat-user">
         <img src={Profil} alt="profil1" className='profil1' />
         <p>Wall Fred</p>
-        <IoIosHelpCircleOutline />
+        <TbHelpHexagon />
       </div>
 
 
