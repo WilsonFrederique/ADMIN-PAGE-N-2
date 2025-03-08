@@ -1,8 +1,7 @@
 .chat-box{
-    height: 70vh !important;
-    width: 58vh !important;
+    height: 65vh !important;
     position: relative !important;
-    background-color: #e0dfdf !important;
+    background-color: #f0efef !important;
 }
 
 body.dark .chat-box{
@@ -59,12 +58,16 @@ body.light .chat-user p{
     cursor: pointer !important;
 }
 
+.nv-icon{
+    display: none;
+}
+
 .chat-input{
     display: flex !important;
     align-items: center !important;
     gap: 12px !important;
     padding: 10px 15px !important;
-    background: #b5b7bb !important;
+    background: #c9ced7 !important;
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;
@@ -80,7 +83,7 @@ body.dark .chat-input input::placeholder{
 }
 
 .chat-input input{
-    background: #b5b7bb !important;
+    background: #c9ced7 !important;
 }
 
 body.dark .chat-input input{
@@ -90,6 +93,7 @@ body.dark .chat-input input{
 .chat-input svg{
     font-size: 25px !important;
     cursor: pointer !important;
+    color: #393939 !important;
 }
 
 .chat-input label{
