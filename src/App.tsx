@@ -11,6 +11,8 @@ import ProductUpload from "./pages/ProductUpload/ProductUpload";
 import Message from "./pages/Message/Message";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import Clients from "./pages/Clients/Clients";
+import ClientDetail from "./pages/Clients/Components/ClientDetail/ClentDetail";
+import Commande from "./pages/Commande/Commande";
 
 const MyContext = createContext();
 
@@ -100,6 +102,8 @@ export default function App() {
               <Route path="/products/upload" element={<ProductUpload />} />
               <Route path="/message" element={<Message />} />
               <Route path="/clients" element={<Clients />} />
+              <Route path="/clients/details" element={<ClientDetail />} />
+              <Route path="/commande" element={<Commande />} />
             </Routes>
           </div>
         </div>

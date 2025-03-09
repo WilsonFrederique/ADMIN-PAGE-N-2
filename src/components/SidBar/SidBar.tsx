@@ -61,7 +61,7 @@ const SidBar = () => {
                         </div>
                     </li>
                     <li>
-                        <Link to="">
+                        <Link to="/commande">
                             <Button className={`w-100 ${activeTab===2 ? 'active' : ''}`} onClick={()=>isOpenSubmenu(2)}>
                                 <span className='icon'><FaCartArrowDown /></span>
                                 Commandes 
@@ -78,7 +78,7 @@ const SidBar = () => {
                         <div className={`submenuWrapperClient ${activeTab===8 && isToggleSubmenuClient===true ? 'colapse' : 'colapsed'}`}>
                             <ul className="submenu">
                                 <li><Link to="/clients">Client List</Link></li>
-                                <li><Link to="">Client View</Link></li>
+                                <li><Link to="/clients/details">Client View</Link></li>
                             </ul>
                         </div>
                     </li>

@@ -1,5 +1,7 @@
 import './ClientLists.css';
 
+import { Link } from 'react-router-dom';
+
 import Profil from '../../../../assets/images/Profil.png';
 
 import { CiMenuKebab } from "react-icons/ci";
@@ -46,7 +48,9 @@ const ClientLists = () => {
                         </div>
                     </div>
                     <div className="btn-action-clients">
-                        <IoEyeSharp className='icon-action-clien1' />
+                        <Link to="/clients/details">
+                            <IoEyeSharp className='icon-action-clien1' />
+                        </Link>
                         <MdMode className='icon-action-clien2' />
                         <MdDelete className='icon-action-clien3' />
                     </div>
