@@ -12,3 +12,5 @@ Actuellement, deux plugins officiels sont disponibles :
 ![Chargement](./README/images/2.png)
 ![Chargement](./README/images/3.png)
 ![Chargement](./README/images/4.png)
+![Chargement](./README/images/5.png)
+![Chargement](./README/images/6.png)

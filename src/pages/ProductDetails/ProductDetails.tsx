@@ -27,7 +27,6 @@ import { FaReply } from "react-icons/fa";
 
 import Jupe from '../../assets/images/Jupe.jpg';
 import Jupe2 from '../../assets/images/Jupe2.jfif';
-import Jupe3 from '../../assets/images/Jupe3.jfif';
 import Jupe4 from '../../assets/images/Jupe4.jfif';
 import Jupe5 from '../../assets/images/Jupe5.jfif';
 import Jupe6 from '../../assets/images/Jupe6.jfif';
@@ -167,6 +166,14 @@ export const ProductDetails = () => {
                                         <img src={Jupe7} alt="Jupe" className='w-100 h-img-Slider' />
                                     </div>
                                 </Slider>
+                                <div className="mt-4">
+                                    <button className="btn btn-primary me-2">
+                                        <FaShoppingCart /> Add to Cart
+                                    </button>
+                                    <button className="btn btn-outline-secondary">
+                                        <FaReply /> Back
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
