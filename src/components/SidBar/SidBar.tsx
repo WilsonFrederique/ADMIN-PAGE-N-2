@@ -13,6 +13,7 @@ import { IoMdSettings } from "react-icons/io";
 import { IoMdLogOut } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
 import { FaUserPlus } from "react-icons/fa6";
+import { FaUsersBetweenLines } from "react-icons/fa6";
 
 
 import { MyContext } from '../../App';
@@ -22,12 +23,14 @@ import { MyContext } from '../../App';
 const SidBar = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
+    const [isToggleSubmenuClient, setIsToggleSubmenuClient] = useState(false);
 
     const context = useContext(MyContext);
 
     const isOpenSubmenu = (index: number) =>{
         setActiveTab(index);
         setIsToggleSubmenu(!isToggleSubmenu);
+        setIsToggleSubmenuClient(!isToggleSubmenuClient);
     } 
 
     return (
@@ -67,13 +70,17 @@ const SidBar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="">
-                            <Button className={`w-100 ${activeTab===8 ? 'active' : ''}`} onClick={()=>isOpenSubmenu(8)}>
-                                <span className='icon'><FaCartArrowDown /></span>
-                                Clients 
-                                <span className='arrow'><FaAngleRight /></span>
-                            </Button>
-                        </Link>
+                        <Button className={`w-100 ${activeTab===8 && isToggleSubmenuClient===true ? 'active' : ''}`} onClick={()=>isOpenSubmenu(8)}>
+                            <span className='icon'><FaUsersBetweenLines /></span>
+                            Clients 
+                            <span className='arrow'><FaAngleRight /></span>
+                        </Button>
+                        <div className={`submenuWrapperClient ${activeTab===8 && isToggleSubmenuClient===true ? 'colapse' : 'colapsed'}`}>
+                            <ul className="submenu">
+                                <li><Link to="/clients">Client List</Link></li>
+                                <li><Link to="">Client View</Link></li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <Link to="/message">

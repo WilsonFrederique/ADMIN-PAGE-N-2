@@ -165,10 +165,14 @@ display: block; padding: 6px 0; font-size: 14px; font-weight: 500; transition: a
 .main .sidebarWrapper .sidebar ul .submenu li a:hover{ color: #0858f7 !important; }
 /* Sous Menu Btn SideBar Non Affiché */
 .main .sidebarWrapper .sidebar ul .submenuWrapper{ transition: all 0.4s; height: 0; overflow: hidden; }
+.main .sidebarWrapper .sidebar ul .submenuWrapperClient{ transition: all 0.4s; height: 0; overflow: hidden; }
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed .submenu{ opacity: 0; }
+.main .submenuWrapperClient .sidebar ul .submenuWrapperClient.colapsed .submenu{ opacity: 0; }
 /* Sous Menu Btn SideBar Affiché */
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapse{ height: auto; overflow: inherit; opacity: 1; }
+.main .sidebarWrapper .sidebar ul .submenuWrapperClient.colapse{ height: auto; overflow: inherit; opacity: 1; }
 .main .sidebarWrapper .sidebar ul .submenuWrapper.colapse .submenu{ opacity: 1; height: auto; }
+.main .sidebarWrapper .sidebar ul .submenuWrapperClient.colapse .submenu{ opacity: 1; height: auto; }
 /* Mode Sombre */
 body.dark .main .sidebarWrapper .sidebar ul .submenu::before{ background: rgba(255, 255, 255, 0.2) !important; }
 body.dark .main .sidebarWrapper .sidebar ul .submenu li a{ color: rgba(255, 255, 255, 0.7) !important; }

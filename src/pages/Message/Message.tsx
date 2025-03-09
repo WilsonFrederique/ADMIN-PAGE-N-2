@@ -51,44 +51,44 @@ const Message = () => {
         <div>
             <div className="right-content w-100">
                 <div className="card shadow border-0 w-100 flex-row p-4">
-                <h5 className="mb-0">Message</h5>
-                <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumb_">
-                    <StyledBreadcrumb
-                    className="StyledBreadcrumb"
-                    component="a"
-                    href="#"
-                    label="Dash..."
-                    icon={<HomeIcon fontSize="small" />}
-                    />
-                    <StyledBreadcrumb
-                    className="StyledBreadcrumb"
-                    label="Message Lis"
-                    icon={<ExpandMoreIcon fontSize="small" />}
-                    />
-                </Breadcrumbs>
+                    <h5 className="mb-0">Message</h5>
+                    <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumb_">
+                        <StyledBreadcrumb
+                        className="StyledBreadcrumb"
+                        component="a"
+                        href="#"
+                        label="Dash..."
+                        icon={<HomeIcon fontSize="small" />}
+                        />
+                        <StyledBreadcrumb
+                        className="StyledBreadcrumb"
+                        label="Message Lis"
+                        icon={<ExpandMoreIcon fontSize="small" />}
+                        />
+                    </Breadcrumbs>
                 </div>
 
                 <div className="card shadow border-0 p-3 mt-4">
-                <div className="d-flex chat-btn-haut">
-                    <p>Discussion</p>
-                    <p className="deux-icin">
-                        <HiMiniUserGroup className="icon-btn" onClick={resetLeftSidebar} />
-                        <CgProfile className="icon-btn" onClick={() => setActiveComponent("rightsidebar")} />
-                    </p>
-                </div>
-                <div className="chat">
-                <div className="chat-container">
-                    {activeComponent === "chatbox" && (
-                        <div className="style-place-chat">
-                            <div>
-                                <img src={chatDiscussion} alt="" />
+                    <div className="d-flex chat-btn-haut">
+                        <p>Discussion</p>
+                        <p className="deux-icin">
+                            <HiMiniUserGroup className="icon-btn" onClick={resetLeftSidebar} />
+                            <CgProfile className="icon-btn" onClick={() => setActiveComponent("rightsidebar")} />
+                        </p>
+                    </div>
+                    <div className="chat">
+                    <div className="chat-container">
+                        {activeComponent === "chatbox" && (
+                            <div className="style-place-chat">
+                                <div>
+                                    <img src={chatDiscussion} alt="" />
+                                </div>
                             </div>
-                        </div>
-                    )}
-                    {activeComponent === "leftsidebar" && <LeftSidebar key={leftSidebarKey} />}
-                    {activeComponent === "rightsidebar" && <RightSidebar />}
-                </div>
-                </div>
+                        )}
+                        {activeComponent === "leftsidebar" && <LeftSidebar key={leftSidebarKey} />}
+                        {activeComponent === "rightsidebar" && <RightSidebar />}
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
